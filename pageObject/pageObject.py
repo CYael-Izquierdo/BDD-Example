@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePO:
 
     driver = None
+    wait = WebDriverWait(driver, 10, 0.5)
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
@@ -54,6 +55,7 @@ class BaseLoginPO(BasePO):
         return ProjectsPO(self.driver)
 
     def get_username(self):
+        self.wait.until(EC.element_to_be_clickable(self.btn_username_tmenu_loc))
         return self.find_page_element(self.btn_username_tmenu_loc).text
 
 
@@ -72,7 +74,7 @@ class LoginPO(BaseLogoutPO):
         return self.find_page_element(self.flash_error_loc).text
 
     def login(self, user, password):
-        WebDriverWait(self.driver, 10, 0.5).until(EC.element_to_be_clickable(self.txt_user_name_loc))
+        self.wait.until(EC.element_to_be_clickable(self.txt_user_name_loc))
         self.find_page_element(self.txt_user_name_loc).send_keys(user)
         self.find_page_element(self.txt_user_password_loc).send_keys(password)
         self.find_page_element(self.btn_login_loc).click()
