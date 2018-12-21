@@ -3,6 +3,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# try:
+#     element = WebDriverWait(ff, 10).until(EC.presence_of_element_located((By.ID, "myDynamicElement")))
+# finally:
+#     ff.quit()
+
 
 class BasePO:
 
@@ -67,6 +72,7 @@ class LoginPO(BaseLogoutPO):
         return self.find_page_element(self.flash_error_loc).text
 
     def login(self, user, password):
+        WebDriverWait(self.driver, 10, 0.5).until(EC.element_to_be_clickable(self.txt_user_name_loc))
         self.find_page_element(self.txt_user_name_loc).send_keys(user)
         self.find_page_element(self.txt_user_password_loc).send_keys(password)
         self.find_page_element(self.btn_login_loc).click()
