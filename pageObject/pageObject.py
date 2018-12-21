@@ -71,6 +71,7 @@ class LoginPO(BaseLogoutPO):
         super().__init__(driver)
 
     def get_flash_error_text(self):
+        self.wait.until(EC.visibility_of_element_located(self.flash_error_loc))
         return self.find_page_element(self.flash_error_loc).text
 
     def login(self, user, password):
@@ -144,4 +145,5 @@ class ProjectSettingsPO(BaseLoginPO):
     box_successful_creation_loc = (By.XPATH, '//*[@id="flash_notice"]')
 
     def get_flash_notice_text(self):
+        self.wait.until(EC.visibility_of_element_located(self.box_successful_creation_loc))
         return self.find_page_element(self.box_successful_creation_loc).text
