@@ -1,6 +1,6 @@
 from behave import fixture, use_fixture
 from selenium import webdriver
-from selenium.webdriver import ChromeOptions
+
 
 @fixture
 def browser_chrome(context, timeout=30):

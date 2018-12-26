@@ -1,6 +1,6 @@
 Feature: Create new project
 
-  @fixture.browser.chrome @wip
+  @fixture.browser.chrome @Working
   Scenario: Create new project without modules
 
     Given I am on home page

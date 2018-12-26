@@ -1,6 +1,6 @@
 Feature: Logging in
 
-  @fixture.browser.chrome @wip
+  @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account
 
     Given I am on home page
@@ -13,7 +13,7 @@ Feature: Logging in
     | user          | bitnami1  |
     | testaccount1  | TestPsw1  |
 
-  @fixture.browser.chrome @wip
+  @fixture.browser.chrome @Working
   Scenario Outline:
 
     Given I am on home page
