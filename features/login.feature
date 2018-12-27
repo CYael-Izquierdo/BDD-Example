@@ -1,13 +1,12 @@
 Feature: Logging in
 
   Background:
-    Given I am on home page
+    Given a web browser is at the redmine login page
 
   @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account
 
-    When I go to login page
-    And I fill username with <username>, password with <password> and press login
+    When I fill username with <username>, password with <password> and press login
     Then I should see logged in as <username>
 
     Examples: Accounts
@@ -18,8 +17,7 @@ Feature: Logging in
   @fixture.browser.chrome @Working
   Scenario Outline:
 
-    When I go to login page
-    And I fill username with <username>, password with <password> and press login
+    When I fill username with <username>, password with <password> and press login
     Then I should see "Invalid user or password" alert
 
     Examples: Accounts

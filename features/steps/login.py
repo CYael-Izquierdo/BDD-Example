@@ -1,11 +1,11 @@
 from behave import given, when, then
 from pageObject import pageObject as Po
+from features.steps.constants import Constants
 
-base_url = 'http://192.168.64.2/'
 
-
-@when('I go to login page')
+@given('a web browser is at the redmine login page')
 def step_impl(context):
+    context.browser.get(Constants.BASE_URL)
     base_logout_po = Po.BaseLogoutPO(context.browser)
     base_logout_po.goto_login()
 

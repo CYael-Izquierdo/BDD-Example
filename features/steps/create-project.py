@@ -1,13 +1,14 @@
 from behave import given, when, then
 from pageObject import pageObject as Po
 import names
+from features.steps.constants import Constants
 
-base_url = 'localhost:80'
 project_name = names.get_full_name()
 
 
-@given('I am logged in')
+@given('I am logged in redmine home page')
 def step_impl(context):
+    context.browser.get(Constants.BASE_URL)
     loguot_po = Po.BaseLogoutPO(context.browser)
     login_po = loguot_po.goto_login()
     login_po.login('user', 'bitnami1')
