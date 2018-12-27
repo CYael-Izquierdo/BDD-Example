@@ -2,7 +2,7 @@ from behave import given, when, then
 from pageObject import pageObject as Po
 import names
 
-base_url = 'http://192.168.64.2/'
+base_url = 'localhost:80'
 project_name = names.get_full_name()
 
 

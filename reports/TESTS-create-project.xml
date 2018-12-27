@@ -1,15 +1,15 @@
-<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="create-project.Create new project" skipped="0" tests="1" time="3.527869" timestamp="2018-12-26T10:50:55.241898"><testcase classname="create-project.Create new project" name="Create new project without modules" status="passed" time="3.527869"><system-out>
+<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="create-project.Create new project" skipped="0" tests="1" time="3.878316" timestamp="2018-12-27T09:14:45.800354"><testcase classname="create-project.Create new project" name="Create new project without modules" status="passed" time="3.878316"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario: Create new project without modules
-    Given I am on home page ... passed in 0.457s
-    And I am logged in ... passed in 0.657s
-    When I go to create new project ... passed in 0.725s
-    And I enter the new project data without modules ... passed in 1.318s
-    Then I should see a successful creation alert ... passed in 0.100s
-    And I should be able to find the created project in Projects tab ... passed in 0.270s
+    Given I am on home page ... passed in 0.454s
+    And I am logged in ... passed in 0.726s
+    When I go to create new project ... passed in 0.959s
+    And I enter the new project data without modules ... passed in 1.361s
+    Then I should see a successful creation alert ... passed in 0.054s
+    And I should be able to find the created project in Projects tab ... passed in 0.323s
 
 @scenario.end
 --------------------------------------------------------------------------------

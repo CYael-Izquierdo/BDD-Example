@@ -1,55 +1,55 @@
-<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="0" tests="4" time="4.673015" timestamp="2018-12-26T10:51:09.314652"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="passed" time="1.221445"><system-out>
+<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="2" tests="4" time="2.587398" timestamp="2018-12-27T09:14:53.331305"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="passed" time="1.204231"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account -- @1.1 Accounts
-    Given I am on home page ... passed in 0.462s
-    When I go to login page ... passed in 0.280s
-    And I fill username with user, password with bitnami1 and press login ... passed in 0.412s
-    Then I should see logged in as user ... passed in 0.068s
+    Given I am on home page ... passed in 0.471s
+    When I go to login page ... passed in 0.241s
+    And I fill username with user, password with bitnami1 and press login ... passed in 0.435s
+    Then I should see logged in as user ... passed in 0.058s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name="Login with a valid account -- @1.2 Accounts" status="passed" time="1.192847"><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name="Login with a valid account -- @1.2 Accounts" status="passed" time="1.383167"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account -- @1.2 Accounts
-    Given I am on home page ... passed in 0.434s
-    When I go to login page ... passed in 0.250s
-    And I fill username with testaccount1, password with TestPsw1 and press login ... passed in 0.444s
-    Then I should see logged in as testaccount1 ... passed in 0.065s
+    Given I am on home page ... passed in 0.481s
+    When I go to login page ... passed in 0.276s
+    And I fill username with testaccount1, password with TestPsw1 and press login ... passed in 0.564s
+    Then I should see logged in as testaccount1 ... passed in 0.062s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.1 Accounts" status="passed" time="1.107459"><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.1 Accounts" status="untested" time="0"><skipped /><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline:  -- @1.1 Accounts
-    Given I am on home page ... passed in 0.437s
-    When I go to login page ... passed in 0.227s
-    And I fill username with user, password with asd1234 and press login ... passed in 0.376s
-    Then I should see "Invalid user or password" alert ... passed in 0.067s
+    Given I am on home page ... untested in 0.000s
+    When I go to login page ... untested in 0.000s
+    And I fill username with user, password with asd1234 and press login ... untested in 0.000s
+    Then I should see "Invalid user or password" alert ... untested in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.2 Accounts" status="passed" time="1.151265"><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.2 Accounts" status="untested" time="0"><skipped /><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline:  -- @1.2 Accounts
-    Given I am on home page ... passed in 0.459s
-    When I go to login page ... passed in 0.242s
-    And I fill username with hola, password with bitnami1 and press login ... passed in 0.388s
-    Then I should see "Invalid user or password" alert ... passed in 0.063s
+    Given I am on home page ... untested in 0.000s
+    When I go to login page ... untested in 0.000s
+    And I fill username with hola, password with bitnami1 and press login ... untested in 0.000s
+    Then I should see "Invalid user or password" alert ... untested in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
