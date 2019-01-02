@@ -14,4 +14,5 @@ def before_scenario(context, scenario):
 
 def after_step(context, step):
     if step.status.name == 'failed':
+        print('FAIL!!!!!!!!!!!!!!!!!!!!!!!!')
         context.browser.save_screenshot('screenshot/{} {}.png'.format(step.keyword, step.name).replace(' ', '-').lower())
