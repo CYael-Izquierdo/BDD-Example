@@ -1,2 +1,2 @@
 class Constants:
-    BASE_URL = 'http://localhost:80'
+    BASE_URL = 'http://192.168.64.2'

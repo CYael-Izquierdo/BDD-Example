@@ -3,8 +3,6 @@ from pageObject import pageObject as Po
 import names
 from features.steps.constants import Constants
 
-project_name = names.get_full_name()
-
 
 @given('I am logged in redmine home page')
 def step_impl(context):
@@ -24,7 +22,8 @@ def step_impl(context):
 @when('I enter the new project data without modules')
 def step_impl(context):
     new_project_po = Po.NewProjectPO(context.browser)
-    new_project_po.create_new_project_without_modules(project_name)
+    context.project_name = names.get_full_name()
+    new_project_po.create_new_project_without_modules(context.project_name)
 
 
 @then('I should see a successful creation alert')
@@ -37,5 +36,5 @@ def step_impl(context):
 def step_impl(context):
     base_login_po = Po.BaseLoginPO(context.browser)
     projects_po = base_login_po.goto_projects()
-    project = projects_po.find_project_by_name(project_name)
-    assert (project_name in project.text)
+    project = projects_po.find_project_by_name(context.project_name)
+    assert (context.project_name in project.text)

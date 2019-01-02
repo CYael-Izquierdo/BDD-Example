@@ -1,40 +1,14 @@
-<testsuite errors="1" failures="0" hostname="cizquierdo.local" name="create-project.Create new project" skipped="0" tests="1" time="2.248708" timestamp="2018-12-27T12:28:12.272153"><testcase classname="create-project.Create new project" name="Create new project without modules" status="failed" time="2.248708"><error message="Message: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;project_name&quot;]&quot;}&#10;  (Session info: chrome=71.0.3578.98)&#10;  (Driver info: chromedriver=2.45.615355 (d5698f682d8b2742017df6c81e0bd8e6a3063189),platform=Mac OS X 10.14.2 x86_64)&#10;" type="NoSuchElementException">
-<![CDATA[
-Failing step: And I enter the new project data without modules ... failed in 0.024s
-Location: features/create-project.feature:8
-Traceback (most recent call last):
-  File "/Users/cizquierdo/PythonVE/BBDExample/lib/python3.7/site-packages/behave/model.py", line 1329, in run
-    match.run(runner.context)
-  File "/Users/cizquierdo/PythonVE/BBDExample/lib/python3.7/site-packages/behave/matchers.py", line 98, in run
-    self.func(context, *args, **kwargs)
-  File "features/steps/create-project.py", line 27, in step_impl
-    new_project_po.create_new_project_without_modules(project_name)
-  File "/Users/cizquierdo/PycharmProjects/BBDExample/pageObject/pageObject.py", line 121, in create_new_project_without_modules
-    self.find_page_element(self.txt_project_name_loc).send_keys(name)
-  File "/Users/cizquierdo/PycharmProjects/BBDExample/pageObject/pageObject.py", line 17, in find_page_element
-    return self.driver.find_element(loc[0], loc[1])
-  File "/Users/cizquierdo/PythonVE/BBDExample/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 978, in find_element
-    'value': value})['value']
-  File "/Users/cizquierdo/PythonVE/BBDExample/lib/python3.7/site-packages/selenium/webdriver/remote/webdriver.py", line 321, in execute
-    self.error_handler.check_response(response)
-  File "/Users/cizquierdo/PythonVE/BBDExample/lib/python3.7/site-packages/selenium/webdriver/remote/errorhandler.py", line 242, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="project_name"]"}
-  (Session info: chrome=71.0.3578.98)
-  (Driver info: chromedriver=2.45.615355 (d5698f682d8b2742017df6c81e0bd8e6a3063189),platform=Mac OS X 10.14.2 x86_64)
-
-]]>
-</error><system-out>
+<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="create-project.Create new project" skipped="0" tests="1" time="4.810792" timestamp="2019-01-02T09:36:20.421867"><testcase classname="create-project.Create new project" name="Create new project without modules" status="passed" time="4.810792"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario: Create new project without modules
-    Given I am logged in redmine home page ... passed in 1.765s
-    When I go to create new project ... passed in 0.460s
-    And I enter the new project data without modules ... failed in 0.024s
-    Then I should see a successful creation alert ... skipped in 0.000s
-    And I should be able to find the created project in Projects tab ... skipped in 0.000s
+    Given I am logged in redmine home page ... passed in 1.247s
+    When I go to create new project ... passed in 1.654s
+    And I enter the new project data without modules ... passed in 1.493s
+    Then I should see a successful creation alert ... passed in 0.064s
+    And I should be able to find the created project in Projects tab ... passed in 0.353s
 
 @scenario.end
 --------------------------------------------------------------------------------

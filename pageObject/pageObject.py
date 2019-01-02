@@ -118,6 +118,7 @@ class NewProjectPO(BaseProjectsPO):
     btn_create_and_continue_loc = (By.XPATH, '//*[@id="new_project"]/input[4]')
 
     def create_new_project_without_modules(self, name, id='', description='', home_page='', is_public=True):
+        self.wait.until(EC.element_to_be_clickable(self.txt_project_name_loc))
         self.find_page_element(self.txt_project_name_loc).send_keys(name)
         if id:
             txt_id = self.find_page_element(self.txt_project_id_loc)

@@ -1,56 +1,51 @@
-<testsuite errors="1" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="2" tests="4" time="5.906685" timestamp="2018-12-27T12:28:22.720942"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="passed" time="4.350248"><system-out>
+<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="0" tests="4" time="4.726408" timestamp="2019-01-02T09:36:34.242953"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="passed" time="1.201852"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account -- @1.1 Accounts
-    Given a web browser is at the redmine login page ... passed in 0.796s
-    When I fill username with user, password with bitnami1 and press login ... passed in 3.486s
-    Then I should see logged in as user ... passed in 0.068s
+    Given a web browser is at the redmine login page ... passed in 0.708s
+    When I fill username with user, password with bitnami1 and press login ... passed in 0.432s
+    Then I should see logged in as user ... passed in 0.062s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name="Login with a valid account -- @1.2 Accounts" status="failed" time="1.556437"><error message="" type="KeyboardInterrupt">
-<![CDATA[
-Failing step: When I fill username with testaccount1, password with TestPsw1 and press login ... failed in 0.490s
-Location: features/login.feature:9
-ABORTED: By user (KeyboardInterrupt).]]>
-</error><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name="Login with a valid account -- @1.2 Accounts" status="passed" time="1.246414"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account -- @1.2 Accounts
-    Given a web browser is at the redmine login page ... passed in 1.067s
-    When I fill username with testaccount1, password with TestPsw1 and press login ... failed in 0.490s
-    Then I should see logged in as testaccount1 ... skipped in 0.000s
+    Given a web browser is at the redmine login page ... passed in 0.687s
+    When I fill username with testaccount1, password with TestPsw1 and press login ... passed in 0.504s
+    Then I should see logged in as testaccount1 ... passed in 0.055s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.1 Accounts" status="untested" time="0"><skipped /><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.1 Accounts" status="passed" time="1.129046"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline:  -- @1.1 Accounts
-    Given a web browser is at the redmine login page ... untested in 0.000s
-    When I fill username with user, password with asd1234 and press login ... untested in 0.000s
-    Then I should see "Invalid user or password" alert ... untested in 0.000s
+    Given a web browser is at the redmine login page ... passed in 0.682s
+    When I fill username with user, password with asd1234 and press login ... passed in 0.392s
+    Then I should see "Invalid user or password" alert ... passed in 0.055s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.2 Accounts" status="untested" time="0"><skipped /><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name=" -- @1.2 Accounts" status="passed" time="1.149096"><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline:  -- @1.2 Accounts
-    Given a web browser is at the redmine login page ... untested in 0.000s
-    When I fill username with hola, password with bitnami1 and press login ... untested in 0.000s
-    Then I should see "Invalid user or password" alert ... untested in 0.000s
+    Given a web browser is at the redmine login page ... passed in 0.709s
+    When I fill username with hola, password with bitnami1 and press login ... passed in 0.386s
+    Then I should see "Invalid user or password" alert ... passed in 0.055s
 
 @scenario.end
 --------------------------------------------------------------------------------
