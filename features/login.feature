@@ -11,7 +11,7 @@ Feature: Logging in
 
     Examples: Accounts
     | username      | password  |
-    | user          | bitnami11  |
+    | user          | bitnami1  |
     | testaccount1  | TestPsw1 |
 
   @fixture.browser.chrome @Working
