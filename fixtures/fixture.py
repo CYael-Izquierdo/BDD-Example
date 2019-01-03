@@ -1,12 +1,21 @@
 from behave import fixture, use_fixture
 from selenium import webdriver
-import os
+from selenium.webdriver.chrome.options import Options
+from features.steps.constants import Constants
 
 
 @fixture
 def browser_chrome(context, timeout=30):
-    # -- HINT: @behave.fixture is similar to @contextlib.contextmanager
-    context.browser = webdriver.Chrome(executable_path=os.path.abspath('chromedriver'))
+
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--start-maximized')
+    options.add_argument('--window-size=1920x1080')
+    context.browser = webdriver.Chrome(executable_path=Constants.CHROMEDRIVER_PATH,
+                                       chrome_options=options)
+
+    # context.browser = webdriver.Chrome(executable_path=Constants.CHROMEDRIVER_PATH)
     yield context.browser
     # -- CLEANUP-FIXTURE PART:
     context.browser.quit()

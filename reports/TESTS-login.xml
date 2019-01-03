@@ -1,15 +1,26 @@
-<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="4" tests="4" time="0.0" timestamp="2019-01-02T12:00:20.119311"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="untested" time="0"><skipped /><system-out>
+<testsuite errors="1" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="3" tests="4" time="0.020316" timestamp="2019-01-03T09:47:48.365277"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="failed" time="0.020316"><error message="Request-sent" type="CannotSendRequest">
+<![CDATA[
+Failing step: Given a web browser is at the redmine login page ... failed in 0.020s
+Location: features/login.feature:4
+ABORTED: By user (KeyboardInterrupt).
+Captured stdout:
+HOOK-ERROR in after_step: CannotSendRequest: Request-sent]]>
+</error><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working
   Scenario Outline: Login with a valid account -- @1.1 Accounts
-    Given a web browser is at the redmine login page ... untested in 0.000s
-    When I fill username with user, password with bitnami11 and press login ... untested in 0.000s
-    Then I should see logged in as user ... untested in 0.000s
+    Given a web browser is at the redmine login page ... failed in 0.020s
+    When I fill username with user, password with bitnami1 and press login ... skipped in 0.000s
+    Then I should see logged in as user ... skipped in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
+
+Captured stdout:
+HOOK-ERROR in after_step: CannotSendRequest: Request-sent
+
 ]]>
 </system-out></testcase><testcase classname="login.Logging in" name="Login with a valid account -- @1.2 Accounts" status="untested" time="0"><skipped /><system-out>
 <![CDATA[
