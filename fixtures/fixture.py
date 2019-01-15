@@ -1,4 +1,4 @@
-from behave import fixture, use_fixture
+from behave import fixture
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from features.steps.constants import Constants
