@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class BasePO:
-
     driver = None
     wait = WebDriverWait(driver, 10, 0.5)
 
@@ -22,7 +21,6 @@ class BasePO:
 
 
 class BaseLogoutPO(BasePO):
-
     btn_home_tmenu_loc = (By.XPATH, '//*[@id="top-menu"]/ul/li[1]/a')
     btn_projects_tmenu_loc = (By.XPATH, '//*[@id="top-menu"]/ul/li[2]/a')
     btn_help_tmenu_loc = (By.XPATH, '//*[@id="top-menu"]/ul/li[3]/a')
@@ -35,7 +33,6 @@ class BaseLogoutPO(BasePO):
 
 
 class BaseLoginPO(BasePO):
-
     btn_home_tmenu_loc = (By.XPATH, '//*[@id="top-menu"]/ul/li[1]/a')
     btn_my_page_tmenu_loc = (By.XPATH, '//*[@id="top-menu"]/ul/li[2]/a')
     btn_projects_tmenu_loc = (By.XPATH, '//*[@id="top-menu"]/ul/li[3]/a')
@@ -55,7 +52,6 @@ class BaseLoginPO(BasePO):
 
 
 class LoginPO(BaseLogoutPO):
-
     btn_login_loc = (By.XPATH, '//*[@id="login-submit"]')
     txt_user_name_loc = (By.XPATH, '//*[@id="username"]')
     txt_user_password_loc = (By.XPATH, '//*[@id="password"]')
@@ -70,14 +66,13 @@ class LoginPO(BaseLogoutPO):
         return self.find_page_element(self.flash_error_loc).text
 
     def login(self, user, password):
-        self.wait.until(EC.element_to_be_clickable(self.txt_user_name_loc))
+        # self.wait.until(EC.element_to_be_clickable(self.txt_user_name_loc))
         self.find_page_element(self.txt_user_name_loc).send_keys(user)
         self.find_page_element(self.txt_user_password_loc).send_keys(password)
         self.find_page_element(self.btn_login_loc).click()
 
 
 class BaseProjectsPO(BaseLoginPO):
-
     btn_projects_mmenu_loc = (By.LINK_TEXT, 'Projects')
     btn_activity_mmenu_loc = (By.LINK_TEXT, 'Activity')
     btn_issues_mmenu_loc = (By.LINK_TEXT, 'Issues')
@@ -88,7 +83,6 @@ class BaseProjectsPO(BaseLoginPO):
 
 
 class ProjectsPO(BaseProjectsPO):
-
     chk_view_closed_projects_loc = (By.XPATH, '//*[@id="closed"]')
     btn_new_project_loc = (By.XPATH, '//*[@id="content"]/div[1]/a')
 
@@ -104,7 +98,6 @@ class ProjectsPO(BaseProjectsPO):
 
 
 class NewProjectPO(BaseProjectsPO):
-
     txt_project_name_loc = (By.XPATH, '//*[@id="project_name"]')
     txt_project_description_loc = (By.XPATH, '//*[@id="project_description"]')
     txt_project_id_loc = (By.XPATH, '//*[@id="project_identifier"]')
@@ -137,7 +130,6 @@ class NewProjectPO(BaseProjectsPO):
 
 
 class ProjectSettingsPO(BaseLoginPO):
-
     box_successful_creation_loc = (By.XPATH, '//*[@id="flash_notice"]')
 
     def get_flash_notice_text(self):

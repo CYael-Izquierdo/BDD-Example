@@ -1,6 +1,6 @@
 Feature: Create new project
 
-  @fixture.browser.chrome @Working
+  @fixture.browser.chrome @Working @tl.remine.tp1
   Scenario: Create new project without modules
 
     Given I am logged in redmine home page
