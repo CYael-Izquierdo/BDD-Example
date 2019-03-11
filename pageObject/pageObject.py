@@ -10,7 +10,6 @@ class BasePO:
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
-        self.wait = WebDriverWait(driver=driver, timeout=10, poll_frequency=0.5)
 
     def find_page_element(self, loc):
         return self.driver.find_element(loc[0], loc[1])

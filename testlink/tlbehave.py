@@ -52,7 +52,7 @@ class TLBehave:
                     # test_suit = create_new_test_suit(scenario.feature, client, test_project_id)[0]
                     test_suit = client.createTestSuite(test_project_id, scenario.feature.name, 'created by software')[0]
                 test_suit_id = test_suit['id']
-                tc_steps = TLBehave.create_scenario_steps_to_tl(scenario.steps)
+                tc_steps = TLBehave._create_scenario_steps_to_tl(scenario.steps)
                 new_tc = client.createTestCase(tc_name, test_suit_id, test_project_id, 'user',
                                                scenario.description, tc_steps)
                 # print(new_tc)
@@ -69,7 +69,7 @@ class TLBehave:
                 # ver si se modificó algún paso
                 for idx, step in enumerate(scenario.steps):
                     if tc_info['steps'][idx]['actions'] != step.name:
-                        tc_new_steps = TLBehave.create_scenario_steps_to_tl(scenario.steps)
+                        tc_new_steps = TLBehave._create_scenario_steps_to_tl(scenario.steps)
                         break
                 if tc_new_steps:
                     asd = client.updateTestCase(tc_info['testcase_id'], steps=tc_new_steps)
@@ -115,7 +115,7 @@ class TLBehave:
                                                                       file, 'Fail', 'Fail')
                 # print(upload_attachmeent)
 
-    def create_scenario_steps_to_tl(steps):
+    def _create_scenario_steps_to_tl(steps):
         tc_steps = []
         for idx, step in enumerate(steps):
             tc_step = {'step_number': idx + 1,

@@ -1,38 +1,49 @@
-<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="0" tests="3" time="3.10452" timestamp="2019-01-18T10:29:44.291031"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="passed" time="1.08071"><system-out>
+<testsuite errors="1" failures="0" hostname="cizquierdo.local" name="login.Logging in" skipped="2" tests="3" time="2.519489" timestamp="2019-01-31T09:04:57.194026"><testcase classname="login.Logging in" name="Login with a valid account -- @1.1 Accounts" status="failed" time="2.519489"><error message="Request-sent" type="CannotSendRequest">
+<![CDATA[
+Failing step: Given a web browser is at the redmine login page ... failed in 2.519s
+Location: features/login.feature:6
+ABORTED: By user (KeyboardInterrupt).
+Captured stdout:
+HOOK-ERROR in after_step: CannotSendRequest: Request-sent]]>
+</error><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working @tl.remine.tp1
   Scenario Outline: Login with a valid account -- @1.1 Accounts
-    Given a web browser is at the redmine login page ... passed in 0.658s
-    When I fill username with user, password with bitnami1 and press login ... passed in 0.356s
-    Then I should see logged in as user ... passed in 0.067s
+    Given a web browser is at the redmine login page ... failed in 2.519s
+    When I fill username with user, password with bitnami1 and press login ... skipped in 0.000s
+    Then I should see logged in as user ... skipped in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
+
+Captured stdout:
+HOOK-ERROR in after_step: CannotSendRequest: Request-sent
+
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name="Login with a invalid username account -- @1.1 " status="passed" time="1.001736"><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name="Login with a invalid username account -- @1.1 " status="untested" time="0"><skipped /><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working @tl.remine.tp1
   Scenario Outline: Login with a invalid username account -- @1.1 
-    Given a web browser is at the redmine login page ... passed in 0.657s
-    When I fill username with user, password with asd1234 and press login ... passed in 0.290s
-    Then I should see "Invalid user or password" alert ... passed in 0.055s
+    Given a web browser is at the redmine login page ... untested in 0.000s
+    When I fill username with user, password with asd1234 and press login ... untested in 0.000s
+    Then I should see "Invalid user or password" alert ... untested in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------
 ]]>
-</system-out></testcase><testcase classname="login.Logging in" name="Login with a invalid password account -- @1.2 " status="passed" time="1.022074"><system-out>
+</system-out></testcase><testcase classname="login.Logging in" name="Login with a invalid password account -- @1.2 " status="untested" time="0"><skipped /><system-out>
 <![CDATA[
 @scenario.begin
 
   @fixture.browser.chrome @Working @tl.remine.tp1
   Scenario Outline: Login with a invalid password account -- @1.2 
-    Given a web browser is at the redmine login page ... passed in 0.679s
-    When I fill username with hola, password with bitnami1 and press login ... passed in 0.294s
-    Then I should see "Invalid user or password" alert ... passed in 0.049s
+    Given a web browser is at the redmine login page ... untested in 0.000s
+    When I fill username with hola, password with bitnami1 and press login ... untested in 0.000s
+    Then I should see "Invalid user or password" alert ... untested in 0.000s
 
 @scenario.end
 --------------------------------------------------------------------------------

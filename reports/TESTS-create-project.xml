@@ -1,16 +1,1 @@
-<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="create-project.Create new project" skipped="0" tests="1" time="3.798126" timestamp="2019-01-18T10:29:36.272520"><testcase classname="create-project.Create new project" name="Create new project without modules" status="passed" time="3.798126"><system-out>
-<![CDATA[
-@scenario.begin
-
-  @fixture.browser.chrome @Working @tl.remine.tp1
-  Scenario: Create new project without modules
-    Given I am logged in redmine home page ... passed in 0.934s
-    When I go to create new project ... passed in 0.946s
-    And I enter the new project data without modules ... passed in 1.304s
-    Then I should see a successful creation alert ... passed in 0.051s
-    And I should be able to find the created project in Projects tab ... passed in 0.563s
-
-@scenario.end
---------------------------------------------------------------------------------
-]]>
-</system-out></testcase></testsuite>
+<testsuite errors="0" failures="0" hostname="cizquierdo.local" name="create-project.Create new project&#10;&#10;  @fixture.browser.chrome @Working @tl.remine.tp1&#10;  Scenario: Create new project without modules&#10;&#10;    Given I am logged in redmine home page&#10;    When I go to create new project&#10;    And I enter the new project data without modules&#10;    Then I should see a successful creation alert&#10;    And I should be able to find the created project in Projects tab" skipped="0" tests="0" time="0.0" timestamp="2019-01-31T09:02:23.920243" />
